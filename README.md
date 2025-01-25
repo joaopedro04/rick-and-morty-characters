@@ -22,4 +22,4 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 ## Demo:
 
-You can view demo [here](www.google.com)!
+You can view demo [here](https://rick-and-morty-characters-joaopedro04s-projects.vercel.app/)!
