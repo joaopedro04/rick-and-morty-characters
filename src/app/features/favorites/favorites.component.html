@@ -1,0 +1,25 @@
+<div class="app-favorites">
+    <div class="app-favorites__header">
+        <span class="text-title-lg">FAVORITOS</span>
+    </div>
+    <div
+        *ngIf="favorites.length > 0; else noContent"
+        class="app-favorites__content"
+    >
+        <div class="app-favorites__content__extra-options">
+            <button (click)="handleDeleteFavorites()">
+                <span>Limpar todos</span>
+            </button>
+        </div>
+        <app-cards-list [data]="favorites"></app-cards-list>
+    </div>
+    <ng-template #noContent>
+        <app-error
+            [title]="'Parece que você ainda não tem favoritos'"
+            [subtitle]="
+                'Volte à página inicial e escolha os melhores para você.'
+            "
+            [showHomeButton]="true"
+        ></app-error>
+    </ng-template>
+</div>

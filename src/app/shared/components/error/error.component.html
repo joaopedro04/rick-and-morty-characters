@@ -1,0 +1,7 @@
+<div class="app-error">
+    <p>{{ title() }}</p>
+    <span>{{ subtitle() }}</span>
+    <button *ngIf="showHomeButton()" (click)="handleRedirect()">
+        <span>Voltar ao início</span>
+    </button>
+</div>

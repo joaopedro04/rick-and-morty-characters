@@ -1,0 +1,12 @@
+.app-cards-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
+}
+@media (max-width: 768px) {
+    .app-cards-list {
+        justify-content: center;
+    }
+}

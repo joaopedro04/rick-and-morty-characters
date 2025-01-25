@@ -1,0 +1,30 @@
+<div class="app-navbar">
+    <img
+        src="assets/images/logo-menu.png"
+        alt="logo"
+        class="app-navbar__logo"
+    />
+    <div class="app-navbar__toggle-buttons">
+        <mat-button-toggle-group
+            class="app-navbar__toggle-buttons__group"
+            [hideSingleSelectionIndicator]="true"
+            (change)="handleToggleChange($event)"
+        >
+            <mat-button-toggle
+                class="app-navbar__toggle-buttons__group__button"
+                *ngFor="let button of toggleButtonsConfig"
+                [value]="button.value"
+                [ngClass]="{ active: isActive(button) }"
+            >
+                <mat-icon [fontIcon]="button.icon"></mat-icon>
+                {{ button.label }}
+                <span
+                    *ngIf="button.value === '/favorites'"
+                    class="app-navbar__toggle-buttons__group__button__counter"
+                >
+                    {{ favCounter }}
+                </span>
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+</div>

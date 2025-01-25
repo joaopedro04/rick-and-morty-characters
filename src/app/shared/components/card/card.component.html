@@ -1,0 +1,25 @@
+<div class="app-card">
+    <div class="app-card__favorite">
+        <mat-icon
+            (click)="handleFavoriteClick()"
+            [fontIcon]="getFavoriteIcon()"
+            [ngStyle]="{ color: isFavorite() ? '#0a0a0a' : '#fafafa' }"
+        ></mat-icon>
+    </div>
+    <img
+        src="{{ data().image }}"
+        alt="{{ data().name }}"
+        class="app-card__image"
+    />
+    <div class="app-card__content">
+        <p class="app-card__content__name font-creeper truncate-single-line">
+            {{ data().name }}
+        </p>
+        <p class="app-card__content__description">
+            {{ data().gender }}
+        </p>
+        <p class="app-card__content__description">
+            {{ data().species }}
+        </p>
+    </div>
+</div>

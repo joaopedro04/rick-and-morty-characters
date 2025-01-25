@@ -1,0 +1,25 @@
+<div class="app-home">
+    <div class="app-home__header">
+        <span class="text-title-lg">INÍCIO</span>
+        <input
+            id="search-input"
+            type="text"
+            placeholder="Pesquisar"
+            class="app-home__header__search-input"
+            [formControl]="searchControl"
+        />
+    </div>
+    <div
+        *ngIf="response?.results as characters; else noContent"
+        class="app-home__content"
+    >
+        <app-cards-list [data]="characters"></app-cards-list>
+        <div appInfiniteScroll (scrolled)="loadMore()"></div>
+    </div>
+    <ng-template #noContent>
+        <app-error
+            [title]="'Nada foi encontrado'"
+            [subtitle]="'Tente realizar uma nova busca'"
+        ></app-error>
+    </ng-template>
+</div>

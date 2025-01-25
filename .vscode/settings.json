@@ -1,0 +1,11 @@
+{
+    "editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll"],
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.preferences.quoteStyle": "single",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
