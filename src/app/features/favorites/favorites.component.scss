@@ -54,37 +54,21 @@
             }
         }
     }
+}
 
-    &__no-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-        gap: 16px;
+@media (max-width: 720px) {
+    :host {
+        padding: 48px 0;
+    }
 
-        width: 720px;
-        height: 511px;
-
-        background: #0a0a0a;
-        border: 1px solid #3d3d3d;
-        border-radius: 12px;
-
-        p {
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 100%;
-            text-align: center;
-            letter-spacing: -0.02em;
-            color: #fafafa;
+    .app-favorites {
+        &__header {
+            padding: 0 24px;
+            gap: 8px;
         }
 
-        span {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 150%;
-            text-align: center;
-            color: #a4a4a4;
+        &__no-content {
+            padding: 0 24px;
         }
     }
 }
