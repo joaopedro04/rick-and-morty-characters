@@ -20,6 +20,7 @@
                 {{ button.label }}
                 <span
                     *ngIf="button.value === '/favorites'"
+                    [ngClass]="{ 'counter-active': isActive(button) }"
                     class="app-navbar__toggle-buttons__group__button__counter"
                 >
                     {{ favCounter }}
